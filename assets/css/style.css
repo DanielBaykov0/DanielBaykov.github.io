@@ -259,7 +259,21 @@ h6 {
   }
 }
 
-@media (min-width: 430px) and (max-width: 540px) {
+@media (min-width: 760px) and (max-width: 1023px) {
+  #hero {
+    background: url("../img/home_tablet.png") top center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 759px) {
+  #hero {
+    background: url("../img/coffee_540.jpg") top center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 539px) {
   #hero {
     background: url("../img/coffee_430.jpg") top center;
     background-size: cover;
@@ -283,6 +297,20 @@ h6 {
 @media (min-width: 375px) and (max-width: 392px) {
   #hero {
     background: url("../img/coffee_se.jpg") top center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 374px) {
+  #hero {
+    background: url("../img/coffee_300.jpg") top center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 299px) {
+  #hero {
+    background: url("../img/coffee_240.jpg") top center;
     background-size: cover;
   }
 }
@@ -338,9 +366,39 @@ h6 {
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 56px;
   color: #fff;
+}
+
+@media (min-width: 1366px) and (max-width: 1599px) {
+  #hero h1 {
+    font-size: 54px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+  #hero h1 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #hero h1 {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  #hero h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 20px;
+  }
 }
 
 #hero p {
@@ -348,6 +406,48 @@ h6 {
   margin-bottom: 600px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 1366px) and (max-width: 1599px) {
+  #hero p {
+    font-size: 24px;
+    margin-bottom: 600px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+  #hero p {
+    font-size: 22px;
+    margin-bottom: 600px;
+  }
+}
+
+@media (min-width: 831px) and (max-width: 1023px) {
+  #hero p {
+    font-size: 20px;
+    margin-bottom: 1000px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 830px) {
+  #hero p {
+    font-size: 20px;
+    margin-bottom: 800px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  #hero p {
+    font-size: 16px;
+    margin-bottom: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero p {
+    font-size: 14px;
+    margin-bottom: 500px;
+  }
 }
 
 #hero p span {
