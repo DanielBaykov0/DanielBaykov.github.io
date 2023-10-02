@@ -169,23 +169,56 @@
         itemSelector: '.portfolio-item'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let portfolioFilters = document.querySelectorAll('#portfolio-flters li');
 
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
+              // Filter and show only 'Web' items on page load
+              let initialFilter = '.filter-web';
+              portfolioIsotope.arrange({ filter: initialFilter });
 
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
+              // Mark 'Web' as active in the filters
+              portfolioFilters.forEach(function (filter) {
+                  filter.classList.remove('filter-active');
+                  if (filter.getAttribute('data-filter') === initialFilter) {
+                      filter.classList.add('filter-active');
+                  }
+              });
+
+              portfolioFilters.forEach(function (el) {
+                  el.addEventListener('click', function (e) {
+                      e.preventDefault();
+                      portfolioFilters.forEach(function (el) {
+                          el.classList.remove('filter-active');
+                      });
+                      this.classList.add('filter-active');
+
+                      portfolioIsotope.arrange({
+                          filter: this.getAttribute('data-filter')
+                      });
+                      portfolioIsotope.on('arrangeComplete', function () {
+                          AOS.refresh();
+                      });
+                  });
+              });
+          }
+
+
+//      let portfolioFilters = select('#portfolio-flters li', true);
+
+//      on('click', '#portfolio-flters li', function(e) {
+//        e.preventDefault();
+//        portfolioFilters.forEach(function(el) {
+//          el.classList.remove('filter-active');
+//        });
+//        this.classList.add('filter-active');
+//
+//        portfolioIsotope.arrange({
+//          filter: this.getAttribute('data-filter')
+//        });
+//        portfolioIsotope.on('arrangeComplete', function() {
+//          AOS.refresh()
+//        });
+//      }, true);
+//    }
 
   });
 
