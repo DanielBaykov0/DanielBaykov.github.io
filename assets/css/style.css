@@ -305,19 +305,7 @@ h6 {
   font-size: 20px;
 }
 
-@media (min-width: 3040px) {
-  #hero .hero-container {
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 2340px) and (max-width: 3039px) {
-  #hero .hero-container {
-    font-size: 26px;
-  }
-}
-
-@media (min-width: 1366px) and (max-width: 2339px) {
+@media (min-width: 1366px) and (max-width: 1599px) {
   #hero .hero-container {
     font-size: 24px;
   }
