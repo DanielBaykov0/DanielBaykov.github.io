@@ -241,8 +241,36 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/home.jpg") top center;
+  background: url("../img/home_pc.jpg") top center;
   background-size: cover;
+}
+
+@media (max-width: 1366px) {
+  #hero {
+    background: url("../img/home_pc_small.jpg") top center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1024px) {
+  #hero {
+    background: url("../img/home_pc_smaller.jpg") top center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 767px) {
+  #hero {
+    background: url("../img/home_mobile.jpg") top center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 320px) {
+  #hero {
+    background: url("../img/home_mobile_small.jpg") top center;
+    background-size: cover;
+  }
 }
 
 #hero:before {
