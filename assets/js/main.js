@@ -240,24 +240,6 @@
   });
 
   /**
-     * Portfolio details image full screen
-     */
-     function toggleFullscreen(element) {
-         element.closest('.image-container').classList.toggle('fullscreen');
-     }
-
-     function closeFullscreen(element) {
-         element.closest('.image-container').classList.remove('fullscreen');
-     }
-
-    const images = document.querySelectorAll('.image-container img');
-          images.forEach(img => {
-              img.addEventListener('click', () => {
-                  toggleFullscreen(img);
-              });
-          });
-
-  /**
    * Testimonials slider
    */
   new Swiper('.testimonials-slider', {
